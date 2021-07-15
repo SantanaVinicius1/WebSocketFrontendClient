@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-title>
+        Value Handler
+        <mat-card-subtitle>
+            Mudança de valor 
+        </mat-card-subtitle>
+    </mat-card-title>
+    <mat-slider thumbLabel class="slider" max="200"  (input)="Slide($event)">
+    </mat-slider>
+    <mat-card-content>
+        <button mat-button (click)="conectar()">
+            Conectar WebSocket
+        </button>
+    </mat-card-content>
+</mat-card>

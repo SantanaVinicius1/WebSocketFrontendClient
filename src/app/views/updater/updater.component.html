@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>
+        Value Updater
+        <mat-card-subtitle>
+            Mudança de valor randomico
+            <span id="nSala" #nSala></span>
+        </mat-card-subtitle>
+    </mat-card-title>
+    <span id="valor" class="info"></span>
+    <mat-card-content>
+        <input type="text" id="sala" #sala>
+
+        <button mat-button (click)="conectar(sala.value)">
+            Conectar a Sala
+        </button>
+        <button mat-button id="disconect" (click)="disconect(nSala.innerHTML)">Desconectar da Sala</button>
+        <button mat-button (click)="iniciar()">
+            Iniciar Contagem
+        </button>
+        <button mat-button (click)="parar()">
+            Parar Contagem
+        </button>
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>
+        Value Handler
+        <mat-card-subtitle>
+            Mudança de valor 
+        </mat-card-subtitle>
+    </mat-card-title>
+    <mat-slider thumbLabel class="slider" max="200"  (input)="Slide($event, sala.value)">
+    </mat-slider>
+    <mat-card-content>
+    </mat-card-content>
+</mat-card>

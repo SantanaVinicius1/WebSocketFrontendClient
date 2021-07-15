@@ -1,0 +1,20 @@
+<mat-card class="card">
+    <mat-card-title>
+        Dashboard
+        <mat-card-subtitle>
+            esse é o dashboard
+            <span id="nSala" #nSala></span>
+        </mat-card-subtitle>
+    </mat-card-title>
+    bpm
+    <mat-card-content>
+        <span class="info" id="info">120</span>
+    </mat-card-content>
+   
+</mat-card>
+
+<mat-card>
+    <input type="text" id="sala" #sala>
+    <button mat-button id="conect" (click)="conect(sala.value)">Conectar a Sala</button>
+    <button mat-button id="disconect" (click)="disconect(nSala.innerHTML)">Desconectar da Sala</button>
+</mat-card>

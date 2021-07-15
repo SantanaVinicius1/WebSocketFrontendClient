@@ -1,0 +1,71 @@
+<mat-card>
+    <mat-card-title>
+        Room Manager
+        <mat-card-subtitle>
+            Mudar a visualização de acordo com sala que está conectado
+        </mat-card-subtitle>
+    </mat-card-title>
+
+    <mat-card-content>
+        <div fxLayout="row" fxLayoutGap="500px">
+            <mat-form-field>
+                <mat-label>Salas</mat-label>
+                <mat-select matNativeControl name="salas" (selectionChange)="mudarSala($event)"> 
+                    <mat-option></mat-option>
+                    <mat-option  *ngFor="let sala of salas" [value]="sala.value">{{sala.viewValue}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div>
+                <button mat-button (click)="conectarWebSocket()">
+                    Connectar WebSocket
+                </button>
+    
+                
+                Conectado a Sala: &nbsp;&nbsp;&nbsp;<span id="nSala"></span>
+            </div>
+            
+        </div>
+        
+    
+        <div fxLayout="row" fxLayoutGap="20px" style="margin-top:30px">
+            <mat-card>
+                <mat-card-title>
+                    Slider
+                    <mat-card-subtitle>
+                        update with slide
+                    </mat-card-subtitle>
+                </mat-card-title>
+                <div style="margin-top:10px">&nbsp;</div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <span class="fas fa-temperature-high icone"></span>
+                </div>
+                
+                <mat-card-content>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <span class="info" id="infoSlider">0</span>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-title>
+                    Updater
+                    <mat-card-subtitle>
+                        update randomly
+                    </mat-card-subtitle>
+                </mat-card-title>
+                <div style="margin-top:10px">&nbsp;</div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <span class="fas fa-heart icone"></span>
+                </div>
+                <mat-card-content>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <span class="info" id="infoUpdate">0</span>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+    </mat-card-content>
+
+</mat-card>

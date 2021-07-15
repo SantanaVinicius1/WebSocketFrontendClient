@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.icone {
+    margin-top:10px;
+    margin-bottom: 20px;
+    font-size: 60px;
+
+    color: rgb(152, 201, 207);
+}
+
+
+.info{
+    font-size: 50px;
+    color:rgb(116, 155, 206);
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+
+.slider {
+    width: 500px;
+}
